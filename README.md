@@ -5,9 +5,8 @@ I have included the various files and Js files which are provided by Udacity for
 which I would like to perform once the index.html file get invoke.
 
 # Steps
-Open the index.HTML and once Jasime is installed you should see the Jasmine test window at the bottom of your HTML once DOM is loaded fully.
+Open the index.HTML and once jasmine is installed(Instructions below) you should see the Jasmine test window at the bottom of your HTML once DOM is loaded fully.
 Various tests for the RSS feeds are written in feedreader.js file which will be used to test the RSS Feeds Functionality for the various URL's.
-
 
 #Documentation and started guides:
  http://jasmine.github.io For a quick start guide of Jasmine, see the beginning of http://jasmine.github.io/edge/introduction.html
