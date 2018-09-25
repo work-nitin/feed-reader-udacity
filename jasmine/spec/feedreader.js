@@ -1,6 +1,4 @@
-/* This is the spec file that Jasmine will read and contains
- * all of the tests that will be run against our application.*/
-
+/* This is the spec file that Jasmine will read and contains all of the tests that will be run against our application.*/
 $( function() {
 
 	let startFeed
