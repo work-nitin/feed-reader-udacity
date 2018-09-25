@@ -28,18 +28,18 @@ Various tests for the RSS feeds are written in feedreader.js file which will be 
  To install Jasmine standalone on your local box (where {#.#.#} below is substituted by the release number downloaded):
 
  Download the standalone distribution for your desired release from the releases page
-# Create a Jasmine directory in your project - mkdir my-project/jasmine
-# Move the dist to your project directory - mv jasmine/dist/jasmine-standalone-{#.#.#}.zip my-project/jasmine
-# Change directory - cd my-project/jasmine
-# Unzip the dist - unzip jasmine-standalone-{#.#.#}.zip
-# Add the following to your HTML file:
+Create a Jasmine directory in your project - mkdir my-project/jasmine
+Move the dist to your project directory - mv jasmine/dist/jasmine-standalone-{#.#.#}.zip my-project/jasmine
+Change directory - cd my-project/jasmine
+Unzip the dist - unzip jasmine-standalone-{#.#.#}.zip
+Add the following to your HTML file:
 
-# <link rel="shortcut icon" type="image/png" href="jasmine/lib/jasmine-{#.#.#}/jasmine_favicon.png">
-# <link rel="stylesheet" type="text/css" href="jasmine/lib/jasmine-{#.#.#}/jasmine.css">
+<link rel="shortcut icon" type="image/png" href="jasmine/lib/jasmine-{#.#.#}/jasmine_favicon.png">
+<link rel="stylesheet" type="text/css" href="jasmine/lib/jasmine-{#.#.#}/jasmine.css">
 
-# <script type="text/javascript" src="jasmine/lib/jasmine-{#.#.#}/jasmine.js"></script>
-# <script type="text/javascript" src="jasmine/lib/jasmine-{#.#.#}/jasmine-html.js"></script>
-# <script type="text/javascript" src="jasmine/lib/jasmine-{#.#.#}/boot.js"></script>
+<script type="text/javascript" src="jasmine/lib/jasmine-{#.#.#}/jasmine.js"></script>
+<script type="text/javascript" src="jasmine/lib/jasmine-{#.#.#}/jasmine-html.js"></script>
+<script type="text/javascript" src="jasmine/lib/jasmine-{#.#.#}/boot.js"></script>
 
 ## Why this Project?
 Testing is an important part of the development process and many organizations practice a standard of development known as "test-driven development". This is when developers write tests first, before they ever start developing their application. All the tests initially fail and then they start writing application code to make these tests pass.
@@ -50,7 +50,7 @@ Whether you work in an organization that uses test-driven development or in an o
 
 You will learn how to use Jasmine to write a number of tests against a pre-existing application. These will test the underlying business logic of the application as well as the event handling and DOM manipulation.
 
-#Maintainers
+# Maintainers
 Gregg Van Hove, Pivotal Labs
 Maintainers Emeritus
 Davis W. Frank, Pivotal Labs
