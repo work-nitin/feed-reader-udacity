@@ -14,7 +14,7 @@ $( function() {
 		 * empty.
 		 */
 		it( ' Test case #1 => All RSS feeds are defined correctly', function() {
-			expect(allFeeds).toBeTruthy();
+			expect( allFeeds ).toBeTruthy();
 
 		} );
 
@@ -22,14 +22,14 @@ $( function() {
 		 */
 		it( ' Test case #2 => my url property defined correctly', function() {
 			for ( let feed of allFeeds ) {
-				expect(feed.url).toBeTruthy();
+				expect( feed.url ).toBeTruthy();
 			}
 		} );
 		/* This is our Third test - it tests to make sure that Name proporty is defined properly
 		 */
 		it( ' Test case #3 => my name property defined correctly', function() {
 			for ( let feed of allFeeds ) {
-				expect(feed.name).toBeTruthy();
+				expect( feed.name ).toBeTruthy();
 			}
 		} );
 	} );
@@ -65,23 +65,24 @@ $( function() {
 			loadFeed( 0, done );
 		} );
 		it( 'Test case #6 => loadFeed function works correctly', function() {
-			const entryElement = document.querySelector( '.feed .entry');
-			console.log(entryElement);
+			const entryElement = document.querySelector( '.feed .entry' );
 			expect( entryElement.children.length > 0 ).toBe( true );
 		} );
 
 	} );
 	/************************************suite #4 ************************************************************************************************/
-	/* This is our 7th test to test whether the content actually chnages or not with new feed. As this is Async flow , we
+	/* This is our 7th test to test whether the content actually changes  or not with new feed. As this is Async flow , we
 	are poised to use the beforeeach function to actually load the feeds first and second time and so on*/
 	describe( 'Testing for <New Feed Selection> definitions -> ', function() {
-		const feed = document.querySelector( '.feed' );
 		beforeEach( function( done ) {
 			loadFeed( 0, function() {
-				startFeed = $( '.feed' ).find( allFeeds.url );
-			loadFeed( 1, function() {
-				endFeed = $( '.feed' ).find( allFeeds.url );
-				done();
+				startFeed = $( '.feed' ).html();
+
+				loadFeed( 1, function() {
+					endFeed = $( '.feed' ).html();
+
+					done();
+
 				} );
 			} );
 		} );
