@@ -14,24 +14,22 @@ $( function() {
 		 * empty.
 		 */
 		it( ' Test case #1 => All RSS feeds are defined correctly', function() {
-			expect( allFeeds ).toBeDefined();
-			expect( allFeeds.length ).not.toBe( 0 );
+			expect(allFeeds).toBeTruthy();
+
 		} );
 
 		/* This is our Second test - it tests to make sure that URL is defined properly
 		 */
 		it( ' Test case #2 => my url property defined correctly', function() {
 			for ( let feed of allFeeds ) {
-				expect( feed.url ).toBeDefined();
-				expect( feed.url.length ).not.toBe( 0 );
+				expect(feed.url).toBeTruthy();
 			}
 		} );
 		/* This is our Third test - it tests to make sure that Name proporty is defined properly
 		 */
 		it( ' Test case #3 => my name property defined correctly', function() {
 			for ( let feed of allFeeds ) {
-				expect( feed.name ).toBeDefined();
-				expect( feed.name.length ).not.toBe( 0 );
+				expect(feed.name).toBeTruthy();
 			}
 		} );
 	} );
@@ -61,34 +59,32 @@ $( function() {
 	} );
 
 	/************************************suite #3 ***********************************************************************************************/
+	/* This is our 6th test*/
 	describe( 'Testing for <Initial Entries> definitions -> ', function() {
 		beforeEach( function( done ) {
 			loadFeed( 0, done );
 		} );
-		/* This is our 6th test*/
-		it( ' Test case #6 => loadFeed function works correctly', function() {
-			const entryElement = document.querySelector( '.feed' );
+		it( 'Test case #6 => loadFeed function works correctly', function() {
+			const entryElement = document.querySelector( '.feed .entry');
+			console.log(entryElement);
 			expect( entryElement.children.length > 0 ).toBe( true );
 		} );
 
 	} );
 	/************************************suite #4 ************************************************************************************************/
-	/* TODO: Write a test that ensures when a new feed is loaded
-	 * by the loadFeed function that the content actually changes.
-	 * Remember, loadFeed() is asynchronous.
-	 */
+	/* This is our 7th test to test whether the content actually chnages or not with new feed. As this is Async flow , we
+	are poised to use the beforeeach function to actually load the feeds first and second time and so on*/
 	describe( 'Testing for <New Feed Selection> definitions -> ', function() {
 		const feed = document.querySelector( '.feed' );
 		beforeEach( function( done ) {
 			loadFeed( 0, function() {
 				startFeed = $( '.feed' ).find( allFeeds.url );
-				done();
-			} );
 			loadFeed( 1, function() {
 				endFeed = $( '.feed' ).find( allFeeds.url );
+				done();
+				} );
 			} );
 		} );
-		/* This is our 7th test*/
 		it( ' Test case #7 => loadFeed function content changes and is not equal', function() {
 			expect( startFeed ).not.toBe( endFeed );
 
