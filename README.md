@@ -1,15 +1,25 @@
 # Project Overview
-Its a web-based application that reads RSS feeds.
-# Steps to test the HTML and Javascript with Jasmine Testing Tool
-I have included the various files and Js files which are provided by Udacity for the FEED READER PROJECT. I have updated the feedreader.js file with the test
-which I would like to perform once the index.html file get invoke.
+Its a web-based application that reads RSS feeds from several URL's as mentioned in the JSapps.js file. Main idea for my repo is to test the RSS Feed application using the Jasmine testing tool. RSS feed app uses the Google Feed Reader API to grab RSS feeds for the URLs's as defined in my app.js file and allows you to read and get updated on various feeds on one page.
+Actual design/code of the RSS Feed application was clone from the udacity git repo(https://github.com/udacity/frontend-nanodegree-feedreader) but I have updated the jasmine.js file in my repo to test the app automagically using Jasmine which is a boom for developers to code and test any web application. Main idea for me to provide you with this repo is to test the web app using JASMINE and not to actually show how RSS Feed works.
 
-# Steps
-Open the index.HTML and once jasmine is installed(Instructions below) you should see the Jasmine test window at the bottom of your HTML once DOM is loaded fully.
-Various tests for the RSS feeds are written in feedreader.js file which will be used to test the RSS Feeds Functionality for the various URL's.
+# Steps to test the HTML and Javascript with Jasmine Testing Tool
+I have included all the  files which are required to run the RSS feed app as well as updated Jasmine.js file which includes the new test which I would like to perform with Jasmine on my app.
+All the files can be cloned or found in my git repo
+Pls refer to repo here -
+https://github.com/work-nitin/feed-reader-udacity .
+
+Step 1 : Clone the git repo from https://github.com/work-nitin/feed-reader-udacity ; you will find that feedreader.js file has actually the Jasmine test cases which I would like to perform with my application.
+
+Step 2: Open the index.HTML and once jasmine is installed(Instructions below) you should see the Jasmine test window at the bottom of your HTML once DOM is loaded fully.
+Various tests for the RSS feeds are written in feedreader.js file which will be used to test the RSS Feeds Functionality for the various RSS feeds as well as how the MENU should
+hide or display as part of our project.
+
+Step 3: Click on individual Jasmine tests from the Jasmine test window at the bottom of the application webpage and you will see tests are being ran and passed. Green dot next to Jasmine means that test is passed where as red cross mark shows it failed along with the reason and line number of the code from where the test failed.
+
+In case , you change or get error from app eg: URL's missing etc., Jasmine test window will throw an error (red cross mark ) for our test cases.
 
 #Documentation and started guides:
- http://jasmine.github.io For a quick start guide of Jasmine, see the beginning of http://jasmine.github.io/edge/introduction.html
+For a quick start guide of Jasmine, see the beginning of http://jasmine.github.io/edge/introduction.html
 
 #Installation
  For the Jasmine NPM module:
@@ -26,7 +36,7 @@ Various tests for the RSS feeds are written in feedreader.js file which will be 
 
  To install Jasmine standalone on your local box (where {#.#.#} below is substituted by the release number downloaded):
 
- Download the standalone distribution for your desired release from the releases page
+Download the standalone distribution for your desired release from the releases page
 Create a Jasmine directory in your project - mkdir my-project/jasmine
 Move the dist to your project directory - mv jasmine/dist/jasmine-standalone-{#.#.#}.zip my-project/jasmine
 Change directory - cd my-project/jasmine
