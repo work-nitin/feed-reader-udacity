@@ -36,24 +36,23 @@ $( function() {
 
 	/************************************suite #2 ***************************************************************************************************/
 	describe( 'Testing for <The Menu> definitions -> ', function() {
+		const body = document.querySelector( 'body' );
 
 		/* This is our 4th test - it tests to ensures the menu element is
 		 * hidden by default.
 		 */
 		it( ' Test case #4 => Menu hidden by default', function() {
-			const body = document.querySelector( 'body' );
 			expect( body.classList.contains( 'menu-hidden' ) ).toBe( true );
 		} );
 
 		/* This is our 5th test - test that ensures the menu changes visibility when the menu icon is clicked. This test
 		 * will also test two more expectations: does the menu display when clicked and does it hide when clicked again.*/
 		it( ' Test case #5 => Menu toggles ', function() {
-			const body = document.querySelector( 'body' );
 			const menu = document.querySelector( '.menu-icon-link' );
 			menu.click();
-			expect( body.classList.contains( 'menu-hidden' ) ).toBe( false );
+			expect($('body').hasClass('menu-hidden')).toBe(false);
 			menu.click();
-			expect( body.classList.contains( 'menu-hidden' ) ).toBe( true );
+			expect($('body').hasClass('menu-hidden')).toBe(true);
 		} );
 
 	} );
@@ -65,8 +64,8 @@ $( function() {
 			loadFeed( 0, done );
 		} );
 		it( 'Test case #6 => loadFeed function works correctly', function() {
-			const entryElement = document.querySelector( '.feed .entry' );
-			expect( entryElement.children.length > 0 ).toBe( true );
+			const entryElement = document.querySelectorAll( '.feed .entry' );
+			expect(entryElement.length).toBeGreaterThan(0);
 		} );
 
 	} );
